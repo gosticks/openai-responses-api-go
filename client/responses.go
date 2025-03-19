@@ -540,7 +540,7 @@ func (a *ResponsesStreamAccumulator) AddChunk(chunk *models.ResponseStreamRespon
 						a.Choices[choice.Index].ToolCalls[toolCallIndex].Function.Name = toolCallDelta.Function.Name
 					}
 					if toolCallDelta.Function.Arguments != "" {
-						a.Choices[choice.Index].ToolCalls[toolCallIndex].Function.Arguments += toolCallDelta.Function.Arguments
+						a.Choices[choice.Index].ToolCalls[toolCallIndex].Function.Arguments = toolCallDelta.Function.Arguments
 					}
 				}
 			}
